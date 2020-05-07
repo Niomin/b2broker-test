@@ -1,0 +1,20 @@
+{
+    "name": "niomin/b2broker-test",
+    "require": {
+        "ext-json": "*",
+        "laravel/framework": "^7.9"
+    },
+    "license": "GPLv3 or later",
+    "authors": [
+        {
+            "name": "Aleksandr Kosov",
+            "email": "kosovalexander@yandex.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Niomin\\B2BrokerTest\\": "src"
+        }
+    }
+}
