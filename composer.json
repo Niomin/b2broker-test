@@ -16,5 +16,12 @@
         "psr-4": {
             "Niomin\\B2BrokerTest\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Niomin\\B2BrokerTest\\Providers\\B2BrokerServiceProvider"
+            ]
+        }
     }
 }
