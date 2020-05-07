@@ -10,6 +10,11 @@ use Niomin\B2BrokerTest\Models\B2BrokerRequest;
 
 class B2BrokerController extends Controller
 {
+    public function index()
+    {
+        return response('Hello from B2Broker package');
+    }
+
     public function create(Request $request)
     {
         try {

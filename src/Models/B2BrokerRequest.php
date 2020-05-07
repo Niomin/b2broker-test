@@ -20,5 +20,12 @@ class B2BrokerRequest extends Model
 {
     protected $table = 'b2broker_request';
     protected $hidden = ['deleted'];
+
+    public function __construct(array $attributes = [])
+    {
+        $this->table = config('b2broker.db.tablename');
+        $this->connection = config('b2broker.db.connection');
+        parent::__construct($attributes);
+    }
 }
 

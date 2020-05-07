@@ -13,7 +13,7 @@ class B2brokerRequest extends Migration
      */
     public function up()
     {
-        Schema::create('b2broker_requests', function (Blueprint $table) {
+        Schema::create(config('b2broker.db.tablename'), function (Blueprint $table) {
             $table->id();
             $table->string('text');
             $table->boolean('deleted')->nullable();
@@ -28,6 +28,6 @@ class B2brokerRequest extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('b2broker_requests');
+        Schema::dropIfExists(config('b2broker.db.tablename'));
     }
 }

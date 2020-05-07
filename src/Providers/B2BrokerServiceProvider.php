@@ -28,7 +28,7 @@ class B2BrokerServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../../config/b2broker.php' => config_path('b2broker.php'),
         ]);
-        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations/2020_05_06_235228_b2broker_request.php');
+        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations/');
         $this->loadRoutesFrom(__DIR__ . '/../routes.php');
     }
 }
