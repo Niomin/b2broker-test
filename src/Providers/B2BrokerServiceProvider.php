@@ -3,6 +3,7 @@
 namespace Niomin\B2BrokerTest\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Niomin\B2BrokerTest\Contracts\RepositoryInterface;
 use Niomin\B2BrokerTest\Http\Controllers\B2BrokerController;
 
 class B2BrokerServiceProvider extends ServiceProvider
@@ -15,6 +16,10 @@ class B2BrokerServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->bind(
+            RepositoryInterface::class,
+            config('b2broker.repositoryClass')
+        );
         $this->app->make(B2BrokerController::class);
     }
 
